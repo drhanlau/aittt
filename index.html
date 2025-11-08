@@ -247,6 +247,19 @@
             left: 0%;
         }
     }
+    
+    /* --- CTA Pulse Animation --- */
+    @keyframes pulse-light {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); /* amber-500 with opacity */
+      }
+      50% {
+        box-shadow: 0 0 0 12px rgba(245, 158, 11, 0);
+      }
+    }
+    .cta-pulse {
+      animation: pulse-light 2.5s infinite;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -264,7 +277,8 @@
                 <a href="#curriculum" class="hover:text-amber-300 transition-colors">Curriculum</a>
                 <a href="#trainers" class="hover:text-amber-300 transition-colors">Trainers</a>
                 <a href="#faq" class="hover:text-amber-300 transition-colors">FAQ</a>
-                <a id="reg-link-nav-desktop" href="https://forms.gle/iezwx7m8ZKWaCaZb7" target="_blank" rel="noopener noreferrer" class="bg-amber-500 hover:bg-amber-600 text-gray-900 px-4 py-2 rounded-md font-semibold transition-all">Register Now</a>
+                <!-- IMPROVED NAV CTA -->
+                <a id="reg-link-nav-desktop" href="https://forms.gle/iezwx7m8ZKWaCaZb7" target="_blank" rel="noopener noreferrer" class="bg-gradient-yellow hover:shadow-lg text-gray-900 px-5 py-2 rounded-md font-semibold transition-all transform hover:-translate-y-0.5">Book Your Seat</a>
             </div>
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
@@ -280,7 +294,8 @@
         <a href="#curriculum" class="block hover:text-amber-300 transition-colors py-2">Curriculum</a>
         <a href="#trainers" class="block hover:text-amber-300 transition-colors py-2">Trainers</a>
         <a href="#faq" class="block hover:text-amber-300 transition-colors py-2">FAQ</a>
-        <a id="reg-link-nav-mobile" href="https://forms.gle/iezwx7m8ZKWaCaZb7" target="_blank" rel="noopener noreferrer" class="block bg-amber-500 hover:bg-amber-600 text-gray-900 px-4 py-2 rounded-md font-semibold transition-all text-center mt-2">Register Now</a>
+        <!-- IMPROVED NAV CTA -->
+        <a id="reg-link-nav-mobile" href="https://forms.gle/iezwx7m8ZKWaCaZb7" target="_blank" rel="noopener noreferrer" class="block bg-gradient-yellow hover:shadow-lg text-gray-900 px-4 py-2 rounded-md font-semibold transition-all text-center mt-2">Book Your Seat Now</a>
     </div>
   </nav>
 
@@ -302,8 +317,15 @@
         Become a certified AI Trainer in one month. This program is for current HRDC-trainers, AI career switchers, and internal AI change agents.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a id="reg-link-header" href="https://forms.gle/iezwx7m8ZKWaCaZb7" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto bg-gradient-yellow text-gray-900 font-bold text-lg px-10 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+        <!-- IMPROVED HEADER CTA 1 -->
+        <a id="reg-link-header" href="https://forms.gle/iezwx7m8ZKWaCaZb7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-yellow text-gray-900 font-bold text-lg px-10 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105 hover:-translate-y-1 cta-pulse">
           Book Your Seat Now
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <!-- IMPROVED HEADER CTA 2 -->
+        <a href="https://drive.google.com/file/d/1zvqeNh6JSrc-UvBK0tmB0Kl3aWGwq32a/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto text-white font-bold text-lg px-10 py-4 rounded-lg border border-gray-400 hover:border-white hover:bg-white hover:bg-opacity-10 transition-all transform hover:scale-105 hover:-translate-y-1">
+          <i data-lucide="download" class="w-5 h-5"></i>
+          Download Brochure
         </a>
       </div>
       <!-- Social Proof -->
@@ -587,9 +609,18 @@
             Price: RM18,000 + SST (HRDC Claimable)
           </p>
           <p class="text-gray-400 mb-8">Includes 3-day intensive workshop, all training materials, practicals, and 3-month support.</p>
-          <a id="reg-link-footer" href="https://forms.gle/iezwx7m8ZKWaCaZb7" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-yellow text-gray-900 font-bold text-lg px-10 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
-            Book Your Seat Now
-          </a>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <!-- IMPROVED FOOTER CTA 1 -->
+            <a id="reg-link-footer" href="https://forms.gle/iezwx7m8ZKWaCaZb7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-yellow text-gray-900 font-bold text-lg px-10 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105 hover:-translate-y-1">
+              Book Your Seat Now
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <!-- IMPROVED FOOTER CTA 2 -->
+            <a href="https://drive.google.com/file/d/1zvqeNh6JSrc-UvBK0tmB0Kl3aWGwq32a/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto text-white font-bold text-lg px-10 py-4 rounded-lg border border-gray-400 hover:border-white hover:bg-white hover:bg-opacity-10 transition-all transform hover:scale-105 hover:-translate-y-1">
+              <i data-lucide="download" class="w-5 h-5"></i>
+              Download Brochure
+            </a>
+          </div>
         </div>
       </section>
 
@@ -676,6 +707,35 @@
             });
         }
         
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                // Toggle icon
+                const icon = mobileMenuButton.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.setAttribute('data-lucide', 'menu');
+                } else {
+                    icon.setAttribute('data-lucide', 'x');
+                }
+                lucide.createIcons(); // Re-render icons
+            });
+        }
+        
+        // --- Close mobile menu on link click ---
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons(); // Re-render icons
+                }
+            });
+        }
+        
         // Only init WebGL if THREE is loaded
         if (typeof THREE !== 'undefined') {
             initWebGLBackground(); // Initialize the WebGL background
@@ -740,7 +800,7 @@
             positions[i3 + 2] = radius * Math.cos(phi);
 
             // Color (shades of gray and light amber)
-            const randomColor = Math.random(); // FIXED: Removed extra dot
+            const randomColor = Math.random();
             if (randomColor < 0.8) {
                 color.set(0xAAAAAA); // 80% are light gray
             } else {
